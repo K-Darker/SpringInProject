@@ -8,6 +8,7 @@
   <modules>
     <module>springcloud-zk</module>
     <module>springcloud-config</module>
+      <module>springcloud-ribbon</module>
   </modules>
 
   <parent>
@@ -76,20 +77,7 @@
       <optional>true</optional>
     </dependency>
 
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
 
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-config-server</artifactId>
-    </dependency>
 
   </dependencies>
 
@@ -112,6 +100,22 @@
         <version>${zk.version}</version>
       </dependency>
 
+<!--
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-starter-zookeeper-discovery</artifactId>
+      </dependency>
+
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-config-server</artifactId>
+      </dependency>
+      -->
 
     </dependencies>
   </dependencyManagement>
