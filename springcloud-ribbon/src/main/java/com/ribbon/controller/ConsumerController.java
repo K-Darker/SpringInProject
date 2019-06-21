@@ -27,13 +27,13 @@ public class ConsumerController extends BaseController {
     }
 
     @GetMapping("/get-for-teacher")
-    public String getStringForTeacher(){
+    public Teacher getStringForTeacher(){
         Teacher teacher = new Teacher();
         teacher.setAge(17);
         teacher.setName("nick");
         teacher.setPassWord("1234");
         teacher.setHeader("good");
-        return restTemplate.postForObject("http://localhost:8001/get-teather",teacher,String.class);
+        return restTemplate.getForObject("http://helloclient/get-teacher",Teacher.class);
 //        return restTemplate.postForObject("http://spring-cloud-ribbon-provider/get-teather",teacher,String.class);
     }
 

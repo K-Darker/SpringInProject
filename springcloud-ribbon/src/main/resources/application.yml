@@ -1,7 +1,7 @@
 ###定义实例名
 spring:
   application:
-    name: spring-cloud-ribbon
+    name: helloclient
 server:
   port: 8001
 
@@ -17,4 +17,4 @@ logging:
 ##脱离eureka来完成服务调用
 helloclient:
   ribbon:
-    listOfServers: localhost:8001,localhost:8002
+    listOfServers: 127.0.0.1:8001
