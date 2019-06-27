@@ -3,15 +3,16 @@ server:
 
 spring:
   application:
-    name: feign-consumer
+    name: helloclient
 eureka:
   client:
     service-url:
       defaultZone : http://127.0.0.1:10000/eureka/
+    enabled: false
 
 feign:
   hystrix:
-    enabled: true
+    enabled: false
 
 
 hystrix:
@@ -21,3 +22,9 @@ hystrix:
         isolation:
           thread :
             timeoutInMilliseconds: 100
+
+##脱离eureka来完成服务调用
+helloclient:
+  ribbon:
+    listOfServers: 127.0.0.1:8001
+    NFLoadBalancerRuleClassName: com.ribbon.controller.CustomerRule
