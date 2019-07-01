@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class HelloDemoFallback implements HelloDemoService {
     @Override
-    public Object getTeacher() {
+    public String getTeacher() {
         return "降级了";
     }
 

@@ -26,5 +26,5 @@ hystrix:
 ##脱离eureka来完成服务调用
 helloclient:
   ribbon:
-    listOfServers: 127.0.0.1:8001
-    NFLoadBalancerRuleClassName: com.ribbon.controller.CustomerRule
+    listOfServers: 127.0.0.1:8083
+    #NFLoadBalancerRuleClassName: com.ribbon.controller.CustomerRule

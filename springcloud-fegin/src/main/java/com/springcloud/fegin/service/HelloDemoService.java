@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Component
-@FeignClient(name="HELLOCLIENT",fallback = HelloDemoFallback.class)
+@FeignClient(name="helloclient",fallback = HelloDemoFallback.class)
 public interface HelloDemoService {
 
     @RequestMapping(value = "",method = RequestMethod.GET)
-    public Object getTeacher();
+    public String getTeacher();
 
     @RequestMapping(value = "/user",method = RequestMethod.GET)
     public Teacher getByTeacher(@RequestParam("id")String id);

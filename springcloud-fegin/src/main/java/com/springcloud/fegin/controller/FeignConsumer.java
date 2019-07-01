@@ -14,6 +14,11 @@ public class FeignConsumer {
     @Autowired
     HelloDemoService helloDemoService;
 
+    @GetMapping("")
+    public String defaultMap(){
+        return "累";
+    }
+
     @GetMapping("/find-teacher")
     public Object findTeacher(){
         return helloDemoService.getTeacher();
