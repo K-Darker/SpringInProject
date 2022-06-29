@@ -55,7 +55,7 @@
     <dbutils.version>1.6</dbutils.version>
     <bouncycastle.version>1.61</bouncycastle.version>
     <velocity.version>1.7</velocity.version>
-    <zk.version>3.4.6</zk.version>
+    <zk.version>3.4.14</zk.version>
   </properties>
 
   <!--所有子项目依赖的包-->
